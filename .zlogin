@@ -12,7 +12,7 @@ date
 uptime
 
 [ -n "$SSH_AUTH_SOCK" ] &&
-	cd ~/zdot &&
+	cd ~/dot &&
 	[ -z "`find .ts -mtime -1 2>/dev/null`" ] &&
 	git pull &&
 	make install &&
