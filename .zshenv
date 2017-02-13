@@ -324,3 +324,10 @@ case "$FQDN" in
 	;;
 esac
 
+
+case "$FQDN" in
+   *.wsr.ac.at)
+        export GIT_AUTHOR_EMAIL="$LOGNAME@wsr.ac.at"
+	;;
+esac
+
