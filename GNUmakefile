@@ -6,6 +6,7 @@ ALLSRC = \
 	.zprofile \
 	.zshenv \
 	.zshrc \
+	.gitconfig \
 
 ALLDST = $(subst ., $(HOME)/., $(ALLSRC)) 
 
