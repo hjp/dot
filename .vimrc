@@ -16,6 +16,7 @@ set secure
 set sm
 set sw=4
 set tw=72
+set viminfo='100,<50,s10,h,%
 colorscheme hjp
 syntax on
 map <F7> :cp
