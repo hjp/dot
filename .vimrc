@@ -8,15 +8,21 @@ set list
 set listchars=tab:»·,trail:·
 set modeline
 set nojoinspaces
-set nrformats=hex
+set nrformats-=octal
+set nrformats+=hex
 set nu
 set printoptions=paper:A4,formfeed:y,portrait:n,number:y,left:10mm,right:10mm
 set ruler
+set scrolloff=5
 set secure
 set sm
 set sw=4
 set tw=72
 set viminfo='100,<50,s10,h,%
+if has('reltime')
+  set incsearch
+endif
+
 colorscheme hjp
 syntax on
 map <F7> :cp
