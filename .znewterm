@@ -28,8 +28,8 @@ then
 	TERM=xterm
 fi
 
-if [[ $TERM = xterm || $TERM = xterm-256color || $TERM = screen ]]
-then
+case "$TERM" in
+    xterm*|screen)
 	# indicated exit status by smiley (suggested by Stig Sandbeck Mathisen)
 	smiley="%b%(0?,%{[32m%}:-),%{[31m%}:-()%{[30m%}%B"
 	prompt="%{]0;%m(%l)%n %~%}%B%m:%~ %T $smiley %h%# %b"
@@ -39,9 +39,11 @@ then
 	# it doesn't work with konsole or gnome-terminal.
 	echo -n '[?67h'
 	stty erase 
-else
+        ;;
+    *)
 	prompt="%B%m:%~ %T %h%# %b"
-fi
+        ;;
+esac
 
 if [[ $TERM = xterm || $TERM = xterm-256color ]]
 then
