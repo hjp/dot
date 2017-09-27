@@ -15,3 +15,8 @@ syntax on
 se comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-,n:\|
 set expandtab
 se nojoinspaces
+set scrolloff=5
+if has('reltime')
+  set incsearch
+endif
+set nrformats-=octal
