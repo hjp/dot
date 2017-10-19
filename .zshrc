@@ -2,7 +2,7 @@ echo ".zshrc: LANG=$LANG"
 umask 022
 bindkey -v
 
-REPORTTIME=1
+REPORTTIME=2
 
 alias	amke=make
 alias	a=alias
