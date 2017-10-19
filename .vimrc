@@ -19,11 +19,12 @@ set sm
 set sw=4
 set tw=72
 set viminfo='100,<50,s10,h,%
-syntax on
 if has('reltime')
   set incsearch
 endif
+
 colorscheme hjp
+syntax on
 map <F7> :cp
 map <F8> :cn
 map!  >I<yypa/O
