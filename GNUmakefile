@@ -24,7 +24,10 @@ echo:
 $(HOME)/%: %
 	cp $^ $@
 
-$(HOME)/%/:
+$(HOME)/.vim/:
+	mkdir $@
+
+$(HOME)/.vim/colors/:
 	mkdir $@
 
 diff:
