@@ -185,14 +185,6 @@ then
 fi
 
 case "$FQDN" in
-   teal.hjp.at)
-	export MAIL=$HOME/Maildir
-	;;
-   *.wsr.ac.at)
-	;;
-esac
-
-case "$FQDN" in
    *.hjp.at)
 	export NNTPSERVER=news.luga.at
 	;;
@@ -201,16 +193,11 @@ case "$FQDN" in
 	;;
 esac
 
-
-
 case "$FQDN" in
-   wsrgeh.wsr.ac.at|coney.wsr.ac.at|bernon.wsr.ac.at|ariel.wsr.ac.at|chthon.h.hjp.at|posbi.wsr.ac.at|braveheart.wsr.ac.at|dialog.wsr.ac.at|samkar.wsr.ac.at|yoyo.hjp.at|yoyo.wsr.ac.at|localhost.localdomain|teal.hjp.at)
-	export LD_LIBRARY_PATH=/usr/local/lib
-	;;
-   tanstaafl.wsr.ac.at|pashkan.wsr.ac.at)
+   pashkan.wsr.ac.at)
 	export LD_LIBRARY_PATH=`preppath -v LD_LIBRARY_PATH /usr/local/lib`
 	;;
-    mri.wsr.ac.at|hrunkner.hjp.at)
+    hrunkner.hjp.at)
         export LD_LIBRARY_PATH=`apppath -v LD_LIBRARY_PATH /usr/lib/jni`
         ;;
    *.wsr.ac.at)
@@ -253,12 +240,6 @@ case "$FQDN" in
    pashkan.wsr.ac.at)
 	export WZRP_CONN=~/.dbi/fiwdevel
 	;;
-   mri.wsr.ac.at)
-	export WZRP_CONN=~/.dbi/fiwdevel
-	;;
-   melbar.wsr.ac.at)
-	export WZRP_CONN=~/.dbi/fiwdevel
-	;;
    algernon.wsr.ac.at)
 	export WZRP_CONN=~/.dbi/fiwssd
 	;;
@@ -272,9 +253,6 @@ case "$FQDN" in
 	export  PERL5LIB=`apppath -c -v PERL5LIB ~/lib/perl5 /usr/local/www/offline/$USER.fiw/lib/perl5 /usr/local/www/offline/dal.fiw/lib/perl5`
 	PATH=`apppath -c /usr/local/www/offline/$USER.fiw/bin /usr/local/www/offline/dal.fiw/bin`
 	;;
-    mri.wsr.ac.at)
-        `apppath -e -v PERL5LIB /home/hjp/wrk/wds/Software/Import/wds-import`
-        ;;
 esac
 
 case "$FQDN" in
@@ -308,7 +286,7 @@ then
 fi
 
 case "$FQDN" in
-   mri.wsr.ac.at)
+   tsimri.wsr.ac.at)
         export GET_PASS_FILES="/home/hjp/wrk/admin/info/pwd_work.gpg /home/hjp/Notes/pw.gpg"
 	;;
 esac
@@ -319,15 +297,15 @@ then
 fi
 
 case "$FQDN" in
-   lemy.wsr.ac.at)
-        $(preppath -e -v PYTHONPATH -c ~/etc/wds)
-	;;
-esac
-
-
-case "$FQDN" in
    *.wsr.ac.at)
         export GIT_AUTHOR_EMAIL="$LOGNAME@wsr.ac.at"
 	;;
 esac
 
+if [ -d /etc/profile.d ]
+then
+    for i in /etc/profile.d/*.sh
+    do
+        . $i
+    done
+fi
