@@ -79,6 +79,17 @@ man () {
     command man "$@"
 }
 
+venv() {
+    for d in venv/"$1" ve/"$1" ~/venv/"$1" "$1"
+    do
+        if [ -f "$d"/bin/activate ]
+        then
+            . "$d"/bin/activate
+            break
+        fi
+    done
+}
+
 source ~/.znewterm
 
 # assume pseudo terminals are from a "safe" terminal
