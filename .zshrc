@@ -29,7 +29,7 @@ then
     alias ack=$ack
 fi
 alias   darkbg='xtermcontrol --bg "#000" --fg "#FFF"'
-alias   lightbg='xtermcontrol --bg "#EEE" --fg "#000"'
+alias   lightbg='xtermcontrol --bg "#EEE" --fg "#000" --highlight="#0FF"'
 alias   defaultbg='. ~/.zxtermcolors'
 alias   ag='ag --color-path 32'
 
