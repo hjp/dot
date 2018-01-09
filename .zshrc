@@ -1,4 +1,3 @@
-echo ".zshrc: LANG=$LANG"
 umask 022
 bindkey -v
 

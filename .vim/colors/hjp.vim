@@ -24,7 +24,13 @@ hi PreProc    term=underline            ctermfg=Magenta   ctermbg=253           
 hi Search term=reverse cterm=NONE ctermfg=White ctermbg=Cyan gui=NONE guifg=Black guibg=Cyan
 hi Special    term=bold                 ctermfg=DarkMagenta ctermbg=253             guifg=Magenta
 hi Statement term=bold ctermfg=DarkBlue gui=NONE guifg=Brown
-hi StatusLine term=bold,reverse cterm=NONE ctermfg=Yellow ctermbg=DarkGray gui=NONE guifg=Yellow guibg=DarkGray
+
+" Use color 226 (pale yellow) instead of the default yellow, because I refined
+" the default yellow to orange for better contrast against a light background
+" (there are way too many command line tools that assume a black background and
+" lightlight stuff in yellow).
+hi StatusLine term=bold,reverse cterm=NONE ctermfg=226 ctermbg=DarkGray gui=NONE guifg=Yellow guibg=DarkGray
+
 hi String     term=bold                    ctermfg=90     ctermbg=NONE              guifg=Magenta
 hi Tag term=bold ctermfg=DarkGreen guifg=DarkGreen
 hi Todo term=standout ctermbg=Yellow ctermfg=Black guifg=Blue guibg=Yellow
