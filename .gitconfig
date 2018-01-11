@@ -10,4 +10,8 @@
 	type = cat-file -t
 	dump = cat-file -p
 [push]
-	default = upstream
+        # 1.7.1:  nothing, matching, tracking, current
+        # 2.11.0: nothing, matching, upstream, current, simple
+        # nothing is inconvenient, matching is dangerous. 
+        # current is only compatible remaining option.
+	default = current
