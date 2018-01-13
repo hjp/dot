@@ -319,8 +319,10 @@ then
 fi
 
 case "$FQDN" in
-   lemy.wsr.ac.at)
-        $(preppath -e -v PYTHONPATH -c ~/etc/wds)
+   oro.wsr.ac.at)
+        cleansing=~/wrk/wds/Software/WDS/Module/30_CLEANSING
+        $(preppath -e -v PYTHONPATH -c $cleansing/lib)
+        $(preppath -e -v PYTHONPATH -c $cleansing/system/app/extraction)
 	;;
 esac
 
