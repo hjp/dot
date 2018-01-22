@@ -286,6 +286,9 @@ case "$FQDN" in
 	export PGHOST=$FQDN
         export PGUSER=fiw
 	;;
+    teleute.wsr.ac.at)
+	export PGHOST=wds.wifo.ac.at
+        ;;
 esac
 
 case "$FQDN" in
