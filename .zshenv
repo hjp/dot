@@ -54,17 +54,13 @@ then
     PATH=`$preppath -c /bin:/usr/bin`
     # Debian's open/libre office is in /usr/bin, so we need to prepend 
     # the current version before it:
-    PATH=`$preppath -c /opt/libreoffice4.3/program`
-    PATH=`$preppath -c /usr/sbin:/sbin:/opt/omni/sbin:/opt/omni/lbin:/var/qmail/bin:/usr/local/ssl/bin:/opt/tusc/bin`
+    PATH=`$preppath -c /usr/sbin:/sbin`
     PATH=`$preppath -c /usr/local/sbin:/usr/local/bin`
-    PATH=`$preppath -c /usr/local/mysql-5.1.40-hpux11.11-hppa2.0w-64bit/bin`
     `$preppath -c -e /usr/local/node-v8.9.4-linux-x86/bin`
     PATH=`$preppath -c $HOME/scripts`
     PATH=`$preppath -c $HOME/bin/hosts:$HOME/bin`
 
     # then append less important stuff
-    PATH=`apppath -c /opt/Navisphere/bin`
-    PATH=`apppath -c /usr/local/majordomo/bin:/usr/lib/majordomo/bin:/usr/local/vnc_x86_linux_2.0:/usr/local/rrdtool-1.0.35/bin`
     PATH=`apppath -c /usr/local/www/offline/devel.fiw/bin`
 fi
 
