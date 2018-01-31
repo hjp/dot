@@ -58,6 +58,7 @@ then
     PATH=`$preppath -c /usr/sbin:/sbin:/opt/omni/sbin:/opt/omni/lbin:/var/qmail/bin:/usr/local/ssl/bin:/opt/tusc/bin`
     PATH=`$preppath -c /usr/local/sbin:/usr/local/bin`
     PATH=`$preppath -c /usr/local/mysql-5.1.40-hpux11.11-hppa2.0w-64bit/bin`
+    `$preppath -c -e /usr/local/node-v8.9.4-linux-x86/bin`
     PATH=`$preppath -c $HOME/scripts`
     PATH=`$preppath -c $HOME/bin/hosts:$HOME/bin`
 
