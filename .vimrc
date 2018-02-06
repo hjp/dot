@@ -23,7 +23,7 @@ if has('reltime')
   set incsearch
 endif
 
-colorscheme hjp
+colorscheme default
 syntax on
 map <F7> :cp
 map <F8> :cn
