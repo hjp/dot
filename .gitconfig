@@ -1,6 +1,6 @@
 [user]
 	name = Peter J. Holzer
-	email = hjp@wsr.ac.at
+	email = hjp@hjp.at
 [alias]
 	co = checkout
 	ci = commit
