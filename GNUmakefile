@@ -7,8 +7,6 @@ ALLSRC = \
 	.zshenv \
 	.zshrc \
 	.gitconfig \
-        .vim/ \
-        .vim/colors/ \
         .vim/colors/hjp.vim \
         .vimrc \
 
@@ -22,10 +20,7 @@ echo:
 	echo $(ALLDST)
 
 $(HOME)/%: %
-	cp $^ $@
-
-$(HOME)/%/:
-	mkdir $@
+	install -D $^ $@
 
 diff:
 	for i in $(ALLSRC); do diff -u $(HOME)/$$i $$i; done
