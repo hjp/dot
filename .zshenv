@@ -57,6 +57,7 @@ then
     PATH=`$preppath -c /usr/sbin:/sbin`
     PATH=`$preppath -c /usr/local/sbin:/usr/local/bin`
     `$preppath -c -e /usr/local/node-v8.9.4-linux-x86/bin`
+    `$preppath -c -e /usr/local/node-v8.9.4-linux-x64/bin`
     PATH=`$preppath -c $HOME/scripts`
     PATH=`$preppath -c $HOME/bin/hosts:$HOME/bin`
 
