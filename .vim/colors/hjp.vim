@@ -15,6 +15,7 @@ let g:colors_name = "hjp"
 hi Comment    term=bold                      ctermfg=88          ctermbg=White                  guifg=Red
 hi Constant   term=underline                 ctermfg=90                                         guifg=Magenta
 hi Error      term=reverse                   ctermfg=15          ctermbg=9                      guifg=White    guibg=Red 
+hi ErrorMsg   term=standout     cterm=NONE   ctermfg=226         ctermbg=DarkRed  gui=NONE      guifg=Yellow   guibg=DarkRed
 hi Identifier term=underline                 ctermfg=22          ctermbg=NONE                   guifg=Blue
 hi LineNr     term=bold      cterm=NONE      ctermfg=Gray        ctermbg=Blue     gui=NONE      guifg=DarkGrey guibg=NONE
 hi MatchParen                                                    ctermbg=yellow
