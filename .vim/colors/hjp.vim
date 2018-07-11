@@ -32,12 +32,12 @@ hi Underlined term=underline cterm=underline ctermfg=163                        
 " hilight stuff in yellow).
 hi StatusLine term=bold,reverse cterm=NONE ctermfg=226 ctermbg=DarkGray gui=NONE guifg=Yellow guibg=DarkGray
 
-hi String     term=bold                    ctermfg=90     ctermbg=NONE              guifg=Magenta
-hi Tag term=bold ctermfg=DarkGreen guifg=DarkGreen
-hi Todo term=standout ctermbg=Yellow ctermfg=Black guifg=Blue guibg=Yellow
-hi Type term=underline ctermfg=Blue gui=NONE guifg=Blue
-hi Visual term=reverse ctermfg=Yellow ctermbg=Red gui=NONE guifg=Black guibg=Yellow
-hi Title               ctermfg=black
+hi String term=bold      ctermfg=90        ctermbg=NONE              guifg=Magenta
+hi Tag    term=bold      ctermfg=DarkGreen                           guifg=DarkGreen
+hi Todo   term=standout  ctermfg=Black     ctermbg=Yellow            guifg=Blue      guibg=Yellow
+hi Type   term=underline ctermfg=Blue                       gui=NONE guifg=Blue
+hi Visual term=reverse   ctermfg=White     ctermbg=DarkBlue gui=NONE guifg=Black     guibg=Yellow
+hi Title                 ctermfg=black
 hi link Boolean	Constant
 hi link Character	Constant
 hi link Conditional	Statement
