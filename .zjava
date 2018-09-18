@@ -62,13 +62,4 @@ then
 	fi
     done
 
-    for i in /usr/local/openxchange
-    do
-	if [ -d "$i" ]
-	then
-	    export OX_HOME="$i"
-	    PATH=$(apppath "$i/bin" "$i/sbin")
-	    break;
-	fi
-    done
 fi
