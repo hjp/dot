@@ -6,8 +6,8 @@
 if whence apppath > /dev/null
 then
     for i in \
+        /usr/local/jdk-10.0.1 \
         /usr/local/jdk1.8.0_112 \
-        /usr/local/jre1.6.0_14 \
 	/usr/local/java \
 	/usr/lib/java
     do
