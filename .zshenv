@@ -50,6 +50,8 @@ then
 
     # first prepend important stuff - in order of increasing priority:
 
+    setopt NULL_GLOB
+
     PATH=`$preppath -c /usr/bin/X11:/usr/games:/usr/contrib/bin`
     PATH=`$preppath -c /bin:/usr/bin`
     # Debian's open/libre office is in /usr/bin, so we need to prepend 
@@ -64,6 +66,8 @@ then
 
     # then append less important stuff
     PATH=`apppath -c /usr/local/www/offline/devel.fiw/bin`
+
+    unsetopt NULL_GLOB
 fi
 
 if [ -r /etc/MANPATH ]
