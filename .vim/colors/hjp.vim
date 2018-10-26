@@ -12,31 +12,32 @@ if exists("syntax_on")
 endif
 let g:colors_name = "hjp"
 
-hi Comment    term=bold                      ctermfg=88        ctermbg=White                  guifg=Red
-hi Constant   term=underline                 ctermfg=90                                       guifg=Magenta
-hi Error      term=reverse                   ctermfg=15        ctermbg=9                      guifg=White    guibg=Red 
-hi Identifier term=underline                 ctermfg=22        ctermbg=NONE                   guifg=Blue
-hi LineNr     term=bold      cterm=NONE      ctermfg=Gray      ctermbg=Blue     gui=NONE      guifg=DarkGrey guibg=NONE
-hi Underlined term=underline cterm=underline ctermfg=163                        gui=underline guifg=SlateBlue
-hi MatchParen ctermbg=yellow
-hi Normal guifg=black guibg=white
-hi PreProc    term=underline            ctermfg=Magenta   ctermbg=253               guifg=Purple
-hi Search term=reverse cterm=NONE ctermfg=White ctermbg=Cyan gui=NONE guifg=Black guibg=Cyan
-hi Special    term=bold                 ctermfg=DarkMagenta ctermbg=253             guifg=Magenta
-hi Statement term=bold ctermfg=DarkBlue gui=NONE guifg=Brown
+hi Comment    term=bold                      ctermfg=88          ctermbg=White                  guifg=Red
+hi Constant   term=underline                 ctermfg=90                                         guifg=Magenta
+hi Error      term=reverse                   ctermfg=15          ctermbg=9                      guifg=White    guibg=Red 
+hi ErrorMsg   term=standout     cterm=NONE   ctermfg=226         ctermbg=DarkRed  gui=NONE      guifg=Yellow   guibg=DarkRed
+hi Identifier term=underline                 ctermfg=22          ctermbg=NONE                   guifg=Blue
+hi LineNr     term=bold      cterm=NONE      ctermfg=Gray        ctermbg=Blue     gui=NONE      guifg=DarkGrey guibg=NONE
+hi MatchParen                                                    ctermbg=yellow
+hi Normal                                                                                       guifg=black    guibg=white
+hi PreProc    term=underline                 ctermfg=Magenta     ctermbg=253                    guifg=Purple
+hi Search     term=reverse   cterm=NONE      ctermfg=White       ctermbg=19       gui=NONE      guifg=Black    guibg=Cyan
+hi Special    term=bold                      ctermfg=53          ctermbg=NONE                   guifg=Magenta
+hi Statement  term=bold                      ctermfg=DarkBlue                     gui=NONE      guifg=Brown
+hi Underlined term=underline cterm=underline ctermfg=163                          gui=underline guifg=SlateBlue
 
 " Use color 226 (pale yellow) instead of the default yellow, because I refined
 " the default yellow to orange for better contrast against a light background
 " (there are way too many command line tools that assume a black background and
-" lightlight stuff in yellow).
+" hilight stuff in yellow).
 hi StatusLine term=bold,reverse cterm=NONE ctermfg=226 ctermbg=DarkGray gui=NONE guifg=Yellow guibg=DarkGray
 
-hi String     term=bold                    ctermfg=90     ctermbg=NONE              guifg=Magenta
-hi Tag term=bold ctermfg=DarkGreen guifg=DarkGreen
-hi Todo term=standout ctermbg=Yellow ctermfg=Black guifg=Blue guibg=Yellow
-hi Type term=underline ctermfg=Blue gui=NONE guifg=Blue
-hi Visual term=reverse ctermfg=Yellow ctermbg=Red gui=NONE guifg=Black guibg=Yellow
-hi Title               ctermfg=black
+hi String term=bold      ctermfg=90        ctermbg=NONE              guifg=Magenta
+hi Tag    term=bold      ctermfg=DarkGreen                           guifg=DarkGreen
+hi Todo   term=standout  ctermfg=Black     ctermbg=Yellow            guifg=Blue      guibg=Yellow
+hi Type   term=underline ctermfg=Blue                       gui=NONE guifg=Blue
+hi Visual term=reverse   ctermfg=White     ctermbg=DarkBlue gui=NONE guifg=Black     guibg=Yellow
+hi Title                 ctermfg=black
 hi link Boolean	Constant
 hi link Character	Constant
 hi link Conditional	Statement

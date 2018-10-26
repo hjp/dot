@@ -1,8 +1,8 @@
-#
-# $Id: .zprofile,v 1.22 2012-10-19 11:03:15 hjp Exp $
-#
 # this is sourced for login shells after .zshenv but before .zshrc
 #
+# Once upon a tim this was also sourced at the start of an Xsession, but
+# that doesn't seem to be the case for my current debian systems (with
+# lightdm/xfce) any more. So everything set here isn't available in X11.
 umask 022
 
 unset MAILCHECK

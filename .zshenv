@@ -50,6 +50,8 @@ then
 
     # first prepend important stuff - in order of increasing priority:
 
+    setopt NULL_GLOB
+
     PATH=`$preppath -c /usr/bin/X11:/usr/games:/usr/contrib/bin`
     PATH=`$preppath -c /bin:/usr/bin`
     # Debian's open/libre office is in /usr/bin, so we need to prepend 
@@ -57,11 +59,15 @@ then
     PATH=`$preppath -c /usr/sbin:/sbin`
     PATH=`$preppath -c /usr/local/sbin:/usr/local/bin`
     `$preppath -c -e /usr/local/node-v8.9.4-linux-x86/bin`
+    `$preppath -c -e /usr/local/node-v8.9.4-linux-x64/bin`
+    `$preppath -c -e -r /usr/lib/go-1.*/bin`
     PATH=`$preppath -c $HOME/scripts`
     PATH=`$preppath -c $HOME/bin/hosts:$HOME/bin`
 
     # then append less important stuff
     PATH=`apppath -c /usr/local/www/offline/devel.fiw/bin`
+
+    unsetopt NULL_GLOB
 fi
 
 if [ -r /etc/MANPATH ]
@@ -271,19 +277,6 @@ case "$FQDN" in
 	export LOCALDOMAIN="wsr.ac.at hjp.at"
 	;;
 esac
-
-if [ -d $HOME/go ]
-then
-    export GOROOT=$HOME/go
-    export GOOS=linux
-    case `uname  -m` in
-    x86_64)
-        export GOARCH=amd64
-        ;;
-    *)
-        export GOARCH=386
-    esac
-fi
 
 case "$FQDN" in
    tsimri.wsr.ac.at)
