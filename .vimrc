@@ -2,7 +2,6 @@ set ai
 " Disable (ab)use of X11 selection
 set clipboard=
 set comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-,n:\|
-set expandtab
 set exrc
 set list
 set listchars=tab:»·,trail:·
@@ -17,11 +16,7 @@ set scrolloff=5
 set secure
 set sm
 set sw=4
-set tw=72
 set viminfo='100,<50,s10,h,%
-if has('reltime')
-  set incsearch
-endif
 
 colorscheme default
 syntax on
