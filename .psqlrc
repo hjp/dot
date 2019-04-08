@@ -1,0 +1,5 @@
+\pset null '(∅)'
+\pset linestyle unicode
+\pset border 2
+\pset unicode_border_linestyle double
+\timing on
