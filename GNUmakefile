@@ -7,6 +7,7 @@ ALLSRC = \
 	.zshenv \
 	.zshrc \
 	.gitconfig \
+        .psqlrc \
         .vim/colors/hjp.vim \
         .vimrc \
 

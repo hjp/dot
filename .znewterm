@@ -51,7 +51,7 @@ then
 	then
 	    . ~/.zxtermcolors
 	else
-	    perl -e 'printf(qq{if whence xtermcontrol >/dev/null\nthen\nxtermcontrol --bg "#%02X%02X%02X"\nfi\n}, map { rand(128)+128 } qw(1 1 1))' > ~/.zxtermcolors
+	    perl -e 'printf(qq{if whence xtermcontrol >/dev/null\nthen\nxtermcontrol --bg "#%02X%02X%02X"\nexport BG=light\nfi\n}, map { rand(128)+128 } qw(1 1 1))' > ~/.zxtermcolors
 	fi
 fi
 
