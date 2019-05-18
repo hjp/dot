@@ -18,8 +18,20 @@ set sm
 set sw=4
 set viminfo='100,<50,s10,h,%
 
-colorscheme default
-syntax on
+if has('reltime')
+  set incsearch
+endif
+
+if $BG == "light"
+    set bg=light
+    colorscheme hjp
+    syntax on
+elseif $BG == "dark"
+    set bg=dark
+    colorscheme default
+    syntax on
+endif
+
 map <F7> :cp
 map <F8> :cn
 map!  >I<yypa/O
