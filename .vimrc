@@ -39,3 +39,7 @@ map!  >I<yypa/O
 autocmd FileType perl let perl_fold=1
 autocmd FileType perl let perl_fold_blocks=1
 autocmd FileType perl syntax on
+
+autocmd FileType go set sw=8
+autocmd FileType go set tw=79
+autocmd FileType go set noexpandtab
