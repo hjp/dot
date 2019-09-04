@@ -15,3 +15,8 @@
         # nothing is inconvenient, matching is dangerous. 
         # current is only compatible remaining option.
 	default = current
+[color "diff"]
+        # Display commit ids blue on white.
+        # Default is yellow on normal which is unreadable with a light
+        # background
+	commit = blue white
