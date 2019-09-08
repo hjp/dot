@@ -30,7 +30,7 @@ fi
 alias   darkbg='xtermcontrol --bg "#000" --fg "#FFF"; export BG=dark'
 alias   lightbg='xtermcontrol --bg "#EEE" --fg "#000" --highlight="#0FF"; export BG=light'
 alias   defaultbg='. ~/.zxtermcolors'
-alias   ag='ag --color-path 32'
+alias   ag='ag --color-path "34;47"'
 
 namedir(){
 	eval "$1=~+"
