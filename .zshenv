@@ -299,7 +299,24 @@ esac
 
 case "$FQDN" in
    *.wsr.ac.at)
-        export GIT_AUTHOR_EMAIL="$LOGNAME@wsr.ac.at"
+        if [ -z "$GIT_AUTHOR_EMAIL" ]
+        then
+            export GIT_AUTHOR_EMAIL="$LOGNAME@wsr.ac.at"
+        fi
+        if [ -z "$GIT_AUTHOR_NAME" ]
+        then
+            export GIT_AUTHOR_NAME="Peter J. Holzer"
+        fi
+	;;
+   *.hjp.at)
+        if [ -z "$GIT_AUTHOR_EMAIL" ]
+        then
+            export GIT_AUTHOR_EMAIL="$LOGNAME@hjp.at"
+        fi
+        if [ -z "$GIT_AUTHOR_NAME" ]
+        then
+            export GIT_AUTHOR_NAME="Peter J. Holzer"
+        fi
 	;;
 esac
 
