@@ -134,6 +134,7 @@ case "$LANG" in
 esac
 
 export NLS_DATE_FORMAT='YYYY-MM-DD HH24:MI:SS'
+export NLS_TIMESTAMP_FORMAT='YYYY-MM-DD HH24:MI:SS.FF'
 
 
 if [ -x /usr/bin/less ]
