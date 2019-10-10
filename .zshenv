@@ -54,8 +54,6 @@ then
 
     PATH=`$preppath -c /usr/bin/X11:/usr/games:/usr/contrib/bin`
     PATH=`$preppath -c /bin:/usr/bin`
-    # Debian's open/libre office is in /usr/bin, so we need to prepend 
-    # the current version before it:
     PATH=`$preppath -c /usr/sbin:/sbin`
     PATH=`$preppath -c /usr/local/sbin:/usr/local/bin`
     `$preppath -c -e /usr/local/node-v8.9.4-linux-x86/bin`
