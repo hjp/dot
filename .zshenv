@@ -54,12 +54,11 @@ then
 
     PATH=`$preppath -c /usr/bin/X11:/usr/games:/usr/contrib/bin`
     PATH=`$preppath -c /bin:/usr/bin`
-    # Debian's open/libre office is in /usr/bin, so we need to prepend 
-    # the current version before it:
     PATH=`$preppath -c /usr/sbin:/sbin`
     PATH=`$preppath -c /usr/local/sbin:/usr/local/bin`
     `$preppath -c -e /usr/local/node-v8.9.4-linux-x86/bin`
     `$preppath -c -e -r /usr/lib/go-1.*/bin`
+    `$preppath -c -e -r $HOME/go/bin`
     PATH=`$preppath -c $HOME/scripts`
     PATH=`$preppath -c $HOME/bin/hosts:$HOME/bin`
 
@@ -134,6 +133,7 @@ case "$LANG" in
 esac
 
 export NLS_DATE_FORMAT='YYYY-MM-DD HH24:MI:SS'
+export NLS_TIMESTAMP_FORMAT='YYYY-MM-DD HH24:MI:SS.FF'
 
 
 if [ -x /usr/bin/less ]
