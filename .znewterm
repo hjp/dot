@@ -57,7 +57,7 @@ case "$TERM" in
         ;;
 esac
 
-if [[ $TERM = xterm || $TERM = xterm-256color ]]
+if [[ $TERM = xterm || $TERM = xterm-256color || $TERM = xterm+256color ]]
 then
 	if [ -f ~/.zxtermcolors ]
 	then
