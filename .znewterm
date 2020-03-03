@@ -23,9 +23,24 @@ then
 	stty erase 
 fi
 
-if [[ $TERM == xterm-256color && ! -f /usr/share/terminfo/x/xterm-256color ]]
+if [[ $TERM == xterm-256color && ! -f /usr/share/terminfo/x/xterm-256color && ! -f /lib/terminfo/x/xterm-256color ]]
 then
 	TERM=xterm
+fi
+
+if [[ $TERM == xterm ]]
+then
+        for t in xterm-256color
+        do
+                for dir in /usr/share/terminfo/x /lib/terminfo/x/
+                do
+                    if [[ -f $dir/$t ]]
+                    then
+                            TERM=$t
+                            break 2
+                    fi
+                done
+        done
 fi
 
 case "$TERM" in
