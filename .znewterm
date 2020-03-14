@@ -32,12 +32,12 @@ if [[ $TERM == xterm ]]
 then
         for t in xterm-256color
         do
-                for d in /usr/share/terminfo/x /lib/terminfo/x 
+                for dir in /usr/share/terminfo/x /lib/terminfo/x
                 do
-                    if [[ -f $d/$t ]]
+                    if [[ -f $dir/$t ]]
                     then
                             TERM=$t
-                            break
+                            break 2
                     fi
                 done
         done
