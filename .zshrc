@@ -27,7 +27,7 @@ if ack=`whence ack-grep`
 then
     alias ack=$ack
 fi
-alias   darkbg='xtermcontrol --bg "#000" --fg "#FFF"; export BG=dark'
+alias   darkbg='xtermcontrol --bg "#000" --fg "#FFF --highlight="#00F""; export BG=dark'
 alias   lightbg='xtermcontrol --bg "#EEE" --fg "#000" --highlight="#0FF"; export BG=light'
 alias   defaultbg='. ~/.zxtermcolors'
 alias   ag='ag --color-path "34;47"'
