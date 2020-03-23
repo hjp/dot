@@ -59,6 +59,7 @@ then
     `$preppath -c -e /usr/local/node-v8.9.4-linux-x86/bin`
     `$preppath -c -e /usr/local/node-v8.9.4-linux-x64/bin`
     `$preppath -c -e -r /usr/lib/go-1.*/bin`
+    `$preppath -c -e -r /usr/local/go-1.*/bin`
     `$preppath -c -e -r $HOME/go/bin`
     PATH=`$preppath -c $HOME/scripts`
     PATH=`$preppath -c $HOME/bin/hosts:$HOME/bin`
