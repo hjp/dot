@@ -42,3 +42,8 @@ autocmd FileType perl syntax on
 autocmd FileType go set sw=8
 autocmd FileType go set tw=79
 autocmd FileType go set noexpandtab
+
+autocmd BufRead,BufNewFile *.ts set filetype=javascript
+autocmd FileType javascript set sw=2
+
+autocmd FileType html set sw=2
