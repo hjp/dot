@@ -47,3 +47,5 @@ autocmd BufRead,BufNewFile *.ts set filetype=javascript
 autocmd FileType javascript set sw=2
 
 autocmd FileType html set sw=2
+
+autocmd FileType crontab set tw=0
