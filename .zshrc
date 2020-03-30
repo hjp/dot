@@ -121,7 +121,16 @@ fi
 # don't want to recreate that mess manually.
 if [ -d ~/bin/func ]
 then
+    export FPATH
     FPATH=`preppath -v FPATH ~/bin/func`
+    # We also have to mark all functions explicitely as undefined,
+    # or zsh won't look for them. (Is this new? I thought that zsh would
+    # automatically search for unknown commands in FPATH, too. Maybe
+    # there's an option for that.)
+    for f in ~/bin/func/*
+    do
+        typeset -fu $(basename $f)
+    done
 fi
 
 # for new style completion:
